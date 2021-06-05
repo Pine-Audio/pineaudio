@@ -1,5 +1,5 @@
 <template>
-    <Casette tape-feature="MONO" tape-side="J">My cool Mixtape!!</Casette>
+    <Casette tape-feature="MONO" tape-side="B">My cool Mixtape!!</Casette>
 </template>
 
 <script lang="ts">

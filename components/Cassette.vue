@@ -5,8 +5,8 @@
     <div class="label-text">
       <div class="sticker">
         <div class="tape-description">
-          <div class="tape-side">{{tapeSide}}</div>
-          <div class="tape-feature">{{tapeFeature}}</div>
+          <div class="tape-side">{{ tapeSide }}</div>
+          <div class="tape-feature">{{ tapeFeature }}</div>
         </div>
         <span><slot></slot></span>
       </div>
@@ -21,13 +21,13 @@ export default Vue.extend({
   props: {
     tapeSide: {
       type: String,
-      default: 'A'
+      default: 'A',
     },
     tapeFeature: {
       type: String,
-      default: 'stereo'
-    }
-  }
+      default: 'stereo',
+    },
+  },
 })
 </script>
 
@@ -107,17 +107,17 @@ export default Vue.extend({
 }
 
 .tape-side {
-  margin-top: -.1em;
-  margin-bottom: -.2em;
+  margin-top: -0.1em;
+  margin-bottom: -0.2em;
   font-size: 1.5em;
 }
 
 .tape-feature {
-  font-size: .3em;
+  font-size: 0.3em;
   text-transform: uppercase;
 }
 
 .tape-description ~ span {
-  margin-left: .6em;
+  margin-left: 0.6em;
 }
 </style>

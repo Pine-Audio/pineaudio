@@ -21,12 +21,12 @@ export default Vue.extend({
   data() {
     return {
       completion: 0 as number,
-      forward: true as boolean
+      forward: true as boolean,
     }
   },
   mounted() {
     setInterval(() => {
-      this.completion = this.completion + (this.forward ? .1 : -.1)
+      this.completion = this.completion + (this.forward ? 0.1 : -0.1)
       if (this.completion > 100 || this.completion < 0)
         this.forward = !this.forward
     }, 60)

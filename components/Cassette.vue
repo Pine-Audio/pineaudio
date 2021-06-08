@@ -51,13 +51,13 @@ export default Vue.extend({
     sizeLeft(): object {
       const scale: number = 1 - (0.5 / 100) * this.completion
       return {
-        transform: 'scale(' + scale + ')'
+        transform: 'scale(' + scale + ')',
       }
     },
     sizeRight(): object {
-      const scale: number = (0.5 / 100) * this.completion + .5
+      const scale: number = (0.5 / 100) * this.completion + 0.5
       return {
-        transform: 'scale(' + scale + ')'
+        transform: 'scale(' + scale + ')',
       }
     },
   },

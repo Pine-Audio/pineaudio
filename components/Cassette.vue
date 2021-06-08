@@ -49,17 +49,15 @@ export default Vue.extend({
       }
     },
     sizeLeft(): object {
-      const size: number = 200 - this.completion
+      const scale: number = 1 - (0.5 / 100) * this.completion
       return {
-        width: size + 'px',
-        height: size + 'px',
+        transform: 'scale(' + scale + ')'
       }
     },
     sizeRight(): object {
-      const size: number = 100 + this.completion
+      const scale: number = (0.5 / 100) * this.completion + .5
       return {
-        width: size + 'px',
-        height: size + 'px',
+        transform: 'scale(' + scale + ')'
       }
     },
   },
@@ -71,7 +69,7 @@ export default Vue.extend({
   width: 509px;
   height: 320px;
   position: relative;
-  zoom: 2;
+  zoom: 1;
 }
 
 .case {
@@ -195,7 +193,7 @@ export default Vue.extend({
     ),
     radial-gradient(
       circle,
-      transparent 30px,
+      transparent 35%,
       rgb(29, 37, 43) 30px,
       rgb(29, 37, 43) 10%,
       rgb(11, 13, 15) 10%,
@@ -238,20 +236,20 @@ export default Vue.extend({
   z-index: 0;
   border-radius: 50%;
   position: absolute;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s;
+  transition: transform 0.2;
+  transform-origin: center;
 }
 
 .tape#left {
-  left: 29%;
-  top: 45.5%;
+  left: 9.5%;
+  top: 14%;
   width: 200px;
   height: 200px;
 }
 
 .tape#right {
-  left: 70.7%;
-  top: 45.5%;
+  left: 50.8%;
+  top: 14%;
   width: 200px;
   height: 200px;
 }

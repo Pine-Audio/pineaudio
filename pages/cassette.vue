@@ -1,7 +1,7 @@
 <template>
   <div>
     <Casette tape-feature="stereo" tape-side="B" :completion="completion"
-      >My cool Mixtape!!</Casette
+      >Tape No. 1</Casette
     >
     <input
       v-model.number="completion"
@@ -21,11 +21,14 @@ export default Vue.extend({
   data() {
     return {
       completion: 0 as number,
+      forward: true as boolean
     }
   },
   mounted() {
     setInterval(() => {
-      this.completion = this.completion + 0.1
+      this.completion = this.completion + (this.forward ? .1 : -.1)
+      if (this.completion > 100 || this.completion < 0)
+        this.forward = !this.forward
     }, 60)
   },
 })
